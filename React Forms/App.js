@@ -6,9 +6,11 @@ const App = () =>
 
   const [name , setName] = useState();
 
-  const [lastname , setLastName] = useState();
+  const [LastName , setLastName] = useState();
 
   const [fullName , setfullName] = useState();
+
+  const [lastNameNew, setLastNameNew] = useState();
 
 
 
@@ -26,21 +28,23 @@ const App = () =>
   const onSubmit = (event) => {
     event.preventDefault();
     setfullName(name);
+    setLastNameNew(LastName);
+
   }
   return(
     <>
       <div className="main_div">
       <form onSubmit={onSubmit}>
       <div>
-        <h1>Hello {fullName}</h1>
+        <h1>Hello {fullName} {lastNameNew}</h1>
         <input type="text" placeholder="Enter Your Last Name" 
         onChange={inputEvent} 
           value={name} /> 
           <br />
 
-          <input type="text" placeholder="Enter Your Name" 
-        onChange={inputEventTwo} 
-          value={lastName} /> 
+        <input type="text" placeholder="Enter Your Name" 
+          onChange={inputEventTwo} 
+          value={LastName} /> 
          
 
           
