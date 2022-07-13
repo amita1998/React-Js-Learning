@@ -2,7 +2,7 @@ import React from "react";
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import { useState } from "react";
-
+import ListCom from "./ListCom";
 
 const App = () => {
 
@@ -38,8 +38,8 @@ const App = () => {
 
           <ol>
           
-            {newitem.map((val) => {
-              return  <li>{val}</li>;
+            {newitem.map((val ,index) => {
+              return  <ListCom key={index} text ={val} />;
             })}
           </ol>
           <br/>
