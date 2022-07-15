@@ -4,6 +4,19 @@ import AddIcon from '@material-ui/icons/Add';
 import { useState } from "react";
 import ListCom from "./ListCom";
 
+
+
+const getLocalItmes = () => {
+  let list = localStorage.getItem('lists');
+  console.log(list);
+
+  if (list) {
+      return JSON.parse(localStorage.getItem('lists'));
+  } else {
+      return [];
+  }
+}
+
 const App = () => {
 
   const [item,setItem] = useState();
