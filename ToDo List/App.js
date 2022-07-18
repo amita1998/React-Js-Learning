@@ -1,32 +1,29 @@
 import React from "react";
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
-import { useState } from "react";
-import ListCom from "./ListCom";
+import { useState,useEffect } from "react";
+import ListCom from "./ListCom"; 
 
 
-
-const getLocalItmes = () => {
-  let list = localStorage.getItem('lists');
-  console.log(list);
-
-  if (list) {
-      return JSON.parse(localStorage.getItem('lists'));
-  } else {
-      return [];
-  }
-}
 
 const App = () => {
 
   const [item,setItem] = useState();
   const [newitem,setNewItem] = useState([]);
 
+useEffect(() => {
+    const List = localStorage.getItem("my-list");
+    if(List){
+      setItem(JSON.parse(List));
+    }
+  },[]);
+
+
   const itemEvent = (event) => {
     setItem(event.target.value);
 
   }
-
+  
   const ListOfItems = () => {
     setNewItem((prevValue)=>{
       return [...prevValue, item]
