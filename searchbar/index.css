@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: black;
+    height: 50px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.active_class {
+    color: white !important;
+}
+
+.cnt {
+    vertical-align: -webkit-baseline-middle!important;
+    margin-left: 50px;
+    color: skyblue;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.searchbar {
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.searchbar input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 30px 0;
+}
