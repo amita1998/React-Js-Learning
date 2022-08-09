@@ -1,36 +1,23 @@
 import React from "react";
-import {Route , NavLink} from "react-router-dom";
-import './index.css';
+import { NavLink } from "react-router-dom";
 
-const Menu = () =>{
+
+const Menu = () => {
 
     return(
+
         <>
-        <div className="nav">
-            <NavLink  className='cnt' exact activeclassName="active_class" to="/">
-            About Us
-            </NavLink>
 
-            <NavLink className='cnt' exact activeclassName="active_class" to="/services">
-            Services
-            </NavLink>
+        <div className="menu_style">
+            <NavLink activeClassName="active_class" to="/"> About Us </NavLink>
+            <NavLink activeClassName="active_class"  to="/service"> Service</NavLink>
+            <NavLink activeClassName="active_class"  to="/user/Mini & Micky"> User</NavLink>
+            <NavLink activeClassName="active_class"  to="/contact"> Contact Us</NavLink>
 
-            <NavLink className='cnt' exact activeclassName="active_class" to="/search">
-            Search
-            </NavLink>
-
-            <NavLink className='cnt'  exact activeclassName="active_class" to="/user">
-            User
-            </NavLink>
-
-            <NavLink className='cnt' exact activeclassName="active_class" to="/contact">
-           Contact Us
-            </NavLink>
-            
-
-</div>
+            </div>
         </>
+       
+
     );
 };
-
 export default Menu;
