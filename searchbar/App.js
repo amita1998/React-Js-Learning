@@ -1,31 +1,34 @@
 import React from "react";
-import { Route,Link,Switch} from "react-router-dom";
-import About from './About';
-import Contact from './Contact';
-import Error from './Error';
-import Menu from '/.Menu';
-import User from './User';
-import Search from './Search';
-import Services from './Services';
+import {  Routes,Route } from "react-router-dom";
+import About from "./About";
+import Contact from "./Contact";
+import Error from "./Error";
+import Menu from "./Menu";
+import Service from "./Service";
+import User from "./User";
 import './index.css';
 
+const App = () =>{
 
-const App = () => {
+  const Name = () =>{
 
-return(
-  <>
+    return <h1>Hello , I am name Page</h1>
+  }
+
+  return(
+    <>
     <Menu/>
-    <Switch>
-      <Route exact path="/" component={About}/>
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/service" component={Services} />
-      <Route exact path="/user" component={User} />
-      <Route exact path="/user/:name" component={User} />
-      <Route exact path="/search" component={Search} />
-      <Route component={Error} />
-    </Switch>
+      <Routes>
+     
+        <Route exact path="/"  element={<About/>} />
+        <Route exact path="/contact"  element={<Contact/>} />
+        <Route exact path="/service"  element={<Service/>} />
+        <Route  path="/contact/Name"  element={<Name/>} />
+        <Route  path="/user/:fname"  element={<User/>} />
+        <Route element={<Error/>} />
 
-
-  </>
-);
+      </Routes>
+    </>
+  );
 };
+export default App;
