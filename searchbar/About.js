@@ -1,15 +1,13 @@
 import React from "react";
-import './index.css';
-import { Route,Link } from 'react-router-dom';
 
-const About = () => {
+const About = (props) =>{
 
-return(
-    <div className="App">
+    return(
+        <>
+            <h1>Hello , This is About Page</h1>
+        </>
 
-    <h1>Hello , This is About Page</h1>
-
-    </div>
-);
+    );
 };
+
 export default About;
