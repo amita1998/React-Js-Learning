@@ -16,7 +16,7 @@ const Search = () =>{
         <>
         <div className="serachbar">
         <input type="text" placeholder="Serach Anything?" value={img} onChange={inputEvent} />
-        <Sresult/>
+        <Sresult name={img}/>
         </div>
         </>
     );
