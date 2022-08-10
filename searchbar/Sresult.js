@@ -1,17 +1,17 @@
 import React from "react";
-import './index.css';
 
-const Sresult = (props) => {
+const Sresult = () => {
 
-    const imag=`https://source.unsplash.com/300x300/?${props.name}`;
-    return (
-      <div className="App">
-        
-  <img src={imag} alt='parinot' />
-      </div>
+    const img = 'https://source.unsplash.com/300x300?mango';
+
+    return(
+        <>
+            <div>
+                <img src={img} alt="Search"/>
+            </div>
+        </>
+
     );
-
-}
+};
 
 export default Sresult;
-
