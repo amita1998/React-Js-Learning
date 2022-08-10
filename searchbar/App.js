@@ -6,6 +6,8 @@ import Error from "./Error";
 import Menu from "./Menu";
 import Service from "./Service";
 import User from "./User";
+import Search from "./Search";
+
 import './index.css';
 
 const App = () =>{
@@ -22,6 +24,7 @@ const App = () =>{
      
         <Route exact path="/"  element={<About/>} />
         <Route exact path="/contact"  element={<Contact/>} />
+        <Route exact path="/search"  element={<Search/>} />
         <Route exact path="/service"  element={<Service/>} />
         <Route  path="/contact/Name"  element={<Name/>} />
         <Route  path="/user/:fname"  element={<User/>} />
