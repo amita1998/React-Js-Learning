@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuill } from 'react-quilljs';
-import 'quill/dist/quill.snow.css'; 
+// import 'quill/dist/quill.snow.css'; 
 
 function HtmlEditor(){
     const { quill, quillRef } = useQuill();
@@ -15,13 +15,13 @@ function HtmlEditor(){
         }
       }, [quill]);
 
-      console.log(value,"this is quill editor")
-    return(
-        <div>
-            <div style={{ width: 500, height: 300 }}>
-                <div ref={quillRef} />
-            </div>
-        </div>
-    );
+    //   console.log(value,"this is quill editor")
+    // return(
+    //     <div>
+    //         <div style={{ width: 500, height: 300 }}>
+    //             <div ref={quillRef} />
+    //         </div>
+    //     </div>
+    // );
 }
 export default HtmlEditor;
